@@ -1,0 +1,18 @@
+[ 
+
+    {
+        "title": "Gå på promenad",
+        "completed": false,
+        "category": "Hälsa"
+    },
+    {
+        "title": "Handla mat",
+        "completed": true,
+        "category": "Inköp"
+    },
+    {
+        "title": "Läsa en bok",
+        "completed": false,
+        "category": "Fritid"
+    }
+]

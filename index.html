@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        h1 {
+            color: yellow;
+        }
+        .heart {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do App <span class="heart">❤️</span></h1>
+    <h2>Tasks</h2>
+    <ul>
+        <ul>
+            {% for task in tasks %}
+            <li>
+                {{ task.title }} ({{ "Completed" if task.completed else "Not Completed" }}) 
+                {% if task.category %}
+                    - Category: {{ task.category }}
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+        
+        {% for task in tasks %}
+        <li>{{ task.title }} ({{ "Completed" if task.completed else "Not Completed" }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Add a New Task</h2>
+    <form method="POST" action="/tasks">
+        <label for="title">Title:</label>
+        <input for = " category">category:></input>
+        <input type="text" name="title" required>
+        <label for="completed">Completed:</label>
+        <input type="checkbox" name="completed">
+        <input type="submit" value="Add Task">
+    </form>
+    <br>
+    <img src="images/black cat.jpg" alt="Kitten Emoji" width="500">
+</body>
+</html>
